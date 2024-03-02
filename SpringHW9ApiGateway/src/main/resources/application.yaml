@@ -1,0 +1,22 @@
+server:
+  port: 8895
+
+
+spring:
+  application:
+    name: api gateway
+  cloud:
+    gateway:
+      routes:
+        - id: Microservice1
+          uri: http://localhost:8896/
+          predicates:
+            - Path=/notes/**
+        - id: Microservice2
+          uri: http://localhost:8897/
+          predicates:
+            - Path=/tasks/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8891/eureka

@@ -1,0 +1,10 @@
+server:
+  port: 8896
+
+spring:
+  application:
+    name: Microservice1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8891/eureka

@@ -1,0 +1,14 @@
+server:
+  port: 8897
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+  application:
+    name: Microservice2
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8891/eureka
